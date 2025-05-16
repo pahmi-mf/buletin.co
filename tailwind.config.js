@@ -1,8 +1,9 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
+  darkMode: "class", // atau 'media' kalau kamu mau ikut preferensi OS
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}"
   ],
   theme: {
     extend: {},

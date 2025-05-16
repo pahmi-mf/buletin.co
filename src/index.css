@@ -6,6 +6,11 @@ html, body, #root {
   height: 100%;
   width: 100%;
 }
+.avatar-uploader {
+  background-color: white !important;
+  border-color: #D1D5DB !important;
+}
+
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
