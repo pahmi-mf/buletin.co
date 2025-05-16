@@ -1,14 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import OnboardingProfile from './pages/OnboardingProfile';
 
 function App() {
   return (
-    <div className="text-3xl font-bold text-blue-600 p-4">
-      Tailwind berhasil! 🚀
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/onboarding-profile" replace />} />
+
+        <Route path="/onboarding-profile" element={<OnboardingProfile />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App
+export default App;
