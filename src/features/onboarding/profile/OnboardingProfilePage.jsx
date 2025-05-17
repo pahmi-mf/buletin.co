@@ -1,20 +1,20 @@
+import OnboardingLayout from '@/components/OnboardingLayout';
+import StepperProgressBar from '@/components/StepperProgressBar';
 import ProfileForm from './ProfileForm';
-import StepperProgressBar from '../../../components/StepperProgressBar';
 
 export default function OnboardingProfilePage() {
   return (
-    <div className="min-h-screen bg-white px-4 flex flex-col items-center justify-center">
-      <div className="w-full max-w-xl">
-        <div className="text-center mb-6">
-          <StepperProgressBar currentStep={1} totalSteps={2} />
-          <h1 className="text-3xl font-bold mt-4 text-black">Complete Your Profile</h1>
-          <p className="text-gray-500 text-sm mt-1">Add your profile picture, name, and a short bio.</p>
-        </div>
+    <OnboardingLayout
+      centerContent={<StepperProgressBar currentStep={1} totalSteps={2} />}
+    >
+      <div className="w-full max-w-md bg-gray-50 rounded-2xl px-6 py-8 shadow-sm">
+        <h1 className="text-2xl font-bold text-center text-gray-900 mb-1">Complete Your Profile</h1>
+        <p className="text-center text-gray-500 mb-6">
+          Add your profile picture, name, and a short bio.
+        </p>
 
-        <div className="bg-gray-50 p-0 rounded-2xl shadow-sm min-h-screen flex  justify-center bg-gray-50 dark:bg-gray-900 p-4">
-          <ProfileForm />
-        </div>
+        <ProfileForm />
       </div>
-    </div>
+    </OnboardingLayout>
   );
 }
