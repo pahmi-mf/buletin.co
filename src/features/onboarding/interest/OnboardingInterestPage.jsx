@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BookOpen } from "lucide-react";
 import OnboardingLayout from '@/components/layouts/OnboardingLayout';
-import StepperProgressBar from '@/components/ui/StepperProgressBar';
+import Stepper from '@/components/ui/Stepper';
 import TopicSelector from "./TopicSelector";
 import Button from '@/components/ui/Button';
 import usePageTitle from '@/hooks/usePageTitle';
@@ -28,7 +28,7 @@ const OnboardingInterestPage = () => {
 
 
   return (
-    <OnboardingLayout centerContent={<StepperProgressBar currentStep={2} totalSteps={2} />} >
+    <OnboardingLayout centerContent={<Stepper currentStep={2} totalSteps={2} />} >
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-2xl font-bold text-center text-gray-900 mb-1 mt-6">Discover Content You Love</h1>
         <p className="text-center text-gray-500 mb-6">

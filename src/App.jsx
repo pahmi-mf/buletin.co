@@ -4,6 +4,7 @@ import OnboardingInterest from './pages/OnboardingInterest';
 import OnboardingPublication from './pages/OnboardingPublication';
 import Home from './pages/Home';
 import { useEffect } from "react";
+import OnboardingBank from './pages/OnboardingBank';
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,8 @@ function App() {
         <Route path="/onboarding-interest" element={<OnboardingInterest />} />
 
         <Route path="/onboarding-publication" element={<OnboardingPublication />} />
+
+        <Route path="/onboarding-bank" element={<OnboardingBank />} />
 
         <Route path="/home" element={<Home />} />
       </Routes>

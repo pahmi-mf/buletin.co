@@ -1,5 +1,5 @@
 import OnboardingLayout from '@/components/layouts/OnboardingLayout';
-import StepperProgressBar from '@/components/ui/StepperProgressBar';
+import Stepper from '@/components/ui/Stepper';
 import { X } from 'lucide-react';
 import PublicationForm from './PublicationForm';
 import usePageTitle from '@/hooks/usePageTitle';
@@ -9,7 +9,7 @@ export default function OnboardingPublicationPage() {
 
   return (
     <OnboardingLayout 
-      centerContent={<StepperProgressBar currentStep={1} totalSteps={3} />} 
+      centerContent={<Stepper currentStep={1} totalSteps={3} />} 
       rightContent={
         <a href='/home'
           className="text-rose-500 hover:text-rose-600 transition"

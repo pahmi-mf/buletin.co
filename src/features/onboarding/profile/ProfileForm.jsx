@@ -88,7 +88,7 @@ export default function ProfileForm() {
           placeholder="https://instagram.com/username"
           value={formData.url}
           onChange={handleChange}
-          className="w-auto rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900
+          className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900
             placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50
             dark:bg-gray-100 dark:border-gray-300"
         />

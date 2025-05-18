@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function StepperProgressBar({ currentStep, totalSteps }) {
+export default function Stepper({ currentStep, totalSteps }) {
   const progressPercent = (currentStep / totalSteps) * 100;
 
   return (
