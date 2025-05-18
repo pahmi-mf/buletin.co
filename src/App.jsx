@@ -5,11 +5,13 @@ import OnboardingPublication from './pages/OnboardingPublication';
 import Home from './pages/Home';
 import { useEffect } from "react";
 import OnboardingBank from './pages/OnboardingBank';
+import PublisherPost from './pages/PublisherPost';
 
 function App() {
   useEffect(() => {
   const handleBeforeUnload = () => {
     localStorage.removeItem("userFullName");
+    localStorage.removeItem("hasBulletin");
   };
 
   window.addEventListener("beforeunload", handleBeforeUnload);
@@ -34,6 +36,8 @@ function App() {
         <Route path="/onboarding-bank" element={<OnboardingBank />} />
 
         <Route path="/home" element={<Home />} />
+
+        <Route path="/publisher/post" element={<PublisherPost />} />
       </Routes>
     </BrowserRouter>
   );

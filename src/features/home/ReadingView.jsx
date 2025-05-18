@@ -44,7 +44,7 @@ export function ReadingView() {
           <div>
             <p className="text-sm text-gray-500">📰 Fulan</p>
             <h3 className="text-lg font-semibold leading-tight mt-1">
-              Dari Tas Mewah Palsu ke QRIS Nasional: 12 Buletin Minggu Ini
+              Dari Tas Mewah Palsu ke QRIS Nasional: 12 Buletin Minggu Inii
             </h3>
             <p className="text-sm text-gray-500 mt-1">May 8, 2025 • Fulan</p>
           </div>

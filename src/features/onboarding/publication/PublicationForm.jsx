@@ -5,8 +5,10 @@ import SelectWithValidation from '@/components/ui/SelectWithValidation';
 import { Textarea } from '@/components/ui/textarea';
 import { INTEREST_CATEGORIES } from '@/constants/interests';
 import Button from '@/components/ui/Button';
+import { useNavigate } from "react-router-dom";
 
 export default function PublicationForm() {
+  const navigate = useNavigate();
   const [form, setFormData] = useState({
     image: null,
     avatar: null,
@@ -17,7 +19,6 @@ export default function PublicationForm() {
   });
 
   const [errors, setErrors] = useState({});
-  // const fileInputRef = useRef(null);
 
   const handleChange = (field) => (e) => {
     const value = e?.target?.value ?? e;
@@ -44,7 +45,9 @@ const handleSubmit = (e) => {
     return;
   }
 
+  localStorage.setItem("hasBulletin", true);
   console.log("Form submitted", form);
+  navigate("/publisher/post"); //TODO: sementara by pass, nanti navigate ke screen 5 service plan
 };
 
 

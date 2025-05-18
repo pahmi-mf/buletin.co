@@ -1,4 +1,5 @@
 export function Toggle({ mode, onChange, hasBulletin }) {
+  console.log('Toggle.jsx');
   return (
     <div className="flex space-x-2">
       <button

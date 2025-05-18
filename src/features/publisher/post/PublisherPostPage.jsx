@@ -1,16 +1,15 @@
 import OnboardingLayout from '@/components/layouts/OnboardingLayout';
 import { useState, useEffect } from 'react';
 import { Toggle } from '@/components/ui/Toggle';
-import { ReadingView } from './ReadingView';
 import { WritingDashboard } from '@/components/home/WritingDashboard';
-
 import usePageTitle from '@/hooks/usePageTitle';
 import { useNavigate } from "react-router-dom";
 
-export function HomePage() {
-  usePageTitle("Home");
+export function PublisherPostPage() {
+  usePageTitle("Posts");
   const navigate = useNavigate();
-  const [mode, setMode] = useState('reading');
+
+  const [mode, setMode] = useState('writing');
   const [hasBulletin, setHasBulletin] = useState("");
   useEffect(() => {
     const storedHasBulletin = localStorage.getItem("hasBulletin");
@@ -21,9 +20,9 @@ export function HomePage() {
 
   const handleToggle = (newMode) => {
     if (newMode === 'writing' && !hasBulletin) {
-      navigate("/onboarding-publication");
-    } else {
       setMode(newMode);
+    } else {
+      navigate("/home");
     }
   };
 
@@ -34,9 +33,8 @@ export function HomePage() {
 // TODO: rightContent menu nav
     >
     <div className="px-6 pb-8 max-w-7xl mx-auto">
-
       <div>
-        {mode === 'reading' ? <ReadingView /> : <WritingDashboard />}
+        <WritingDashboard />
       </div>
     </div>
     </OnboardingLayout>
