@@ -27,7 +27,7 @@ export default function AvatarUploader({ onChange }) {
       />
       <div
         onClick={triggerFileSelect}
-        className="w-24 h-24 rounded-full border-2 border-dashed border-gray-300 flex items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 transition relative overflow-hidden"
+        className="w-24 h-24 rounded-full border-2 border-dashed border-gray-300 flex items-center justify-center cursor-pointer bg-white hover:bg-gray-100 transition relative overflow-hidden"
       >
         {preview ? (
           <img

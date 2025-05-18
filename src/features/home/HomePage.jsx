@@ -9,7 +9,7 @@ export function HomePage() {
 
   const handleToggle = (newMode) => {
     if (newMode === 'writing' && !hasBulletin) {
-      window.location.href = '/onboarding-create-bulletin';
+      window.location.href = '/onboarding-publication';
     } else {
       setMode(newMode);
     }
