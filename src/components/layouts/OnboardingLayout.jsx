@@ -31,7 +31,7 @@ export default function OnboardingLayout({ centerContent, rightContent, children
       </div>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-start px-4 py-10">
+      <main className="flex-1 flex flex-col items-center justify-start px-4 py-1">
         {children}
       </main>
     </div>
