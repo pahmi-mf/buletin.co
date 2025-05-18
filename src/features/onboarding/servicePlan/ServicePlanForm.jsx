@@ -33,7 +33,7 @@ export default function ServicePlanForm() {
       {/* Submit button */}
       <div className="pt-4 flex justify-center">
         <Button type="submit" variant="primary">
-          Start Writting
+          Save & Continue
         </Button>
       </div>
 
