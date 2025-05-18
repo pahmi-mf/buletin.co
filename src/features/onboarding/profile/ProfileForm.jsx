@@ -39,6 +39,7 @@ export default function ProfileForm() {
       return;
     }
 
+    localStorage.setItem("userFullName", formData.name);
     console.log("Form submitted", formData);
     navigate("/onboarding-interest");
   };

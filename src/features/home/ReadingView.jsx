@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
+
 export function ReadingView() {
+  const [fullName, setFullName] = useState("");
+  useEffect(() => {
+    const storedName = localStorage.getItem("userFullName");
+    if (storedName) {
+      setFullName(storedName);
+    }
+  }, []);
+
   return (
     <div className="text-black">
-      <h2 className="text-2xl font-bold text-black">Good to see you, Fulan!</h2>
+      <h2 className="text-2xl font-bold text-black">{fullName ? `Good to see you, ${fullName}!` : "Welcome!"}</h2>
       <p className="text-gray-500 mt-1">Stay updated with the latest posts from your favorite bulletins.</p>
 
       <div className="flex items-center gap-2 mt-6">

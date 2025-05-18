@@ -1,4 +1,14 @@
+import { useEffect, useState } from "react";
+
 export function ReadingFeed() {
+  const [fullName, setFullName] = useState("");
+  useEffect(() => {
+    const storedName = localStorage.getItem("userFullName");
+    if (storedName) {
+      setFullName(storedName);
+    }
+  }, []);
+
   // sementara hardcoded data
   const posts = [
     {
@@ -19,7 +29,7 @@ export function ReadingFeed() {
 
   return (
     <div className="space-y-6 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold text-black">Good to see you, Fulan!</h1>
+      <h1 className="text-2xl font-bold text-black">{fullName ? `Good to see you, ${fullName}!` : "Welcome!"}</h1>
       <p className="text-muted-foreground">Stay updated with the latest posts from your favorite bulletins.</p>
 
       {posts.map((post) => (

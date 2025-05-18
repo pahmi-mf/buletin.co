@@ -3,8 +3,22 @@ import OnboardingProfile from './pages/OnboardingProfile';
 import OnboardingInterest from './pages/OnboardingInterest';
 import OnboardingPublication from './pages/OnboardingPublication';
 import Home from './pages/Home';
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+  const handleBeforeUnload = () => {
+    localStorage.removeItem("userFullName");
+  };
+
+  window.addEventListener("beforeunload", handleBeforeUnload);
+
+  // Cleanup agar tidak menumpuk listener
+  return () => {
+    window.removeEventListener("beforeunload", handleBeforeUnload);
+  };
+}, []);
+
   return (
     <BrowserRouter>
       <Routes>
