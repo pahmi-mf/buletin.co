@@ -5,6 +5,7 @@ import OnboardingPublication from './pages/OnboardingPublication';
 import Home from './pages/Home';
 import { useEffect } from "react";
 import OnboardingBank from './pages/OnboardingBank';
+import OnboardingServicePlan from './pages/OnboardingServicePlan';
 import PublisherPost from './pages/PublisherPost';
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
         <Route path="/onboarding-interest" element={<OnboardingInterest />} />
 
         <Route path="/onboarding-publication" element={<OnboardingPublication />} />
+
+        <Route path="/onboarding-publisher-service-plan" element={<OnboardingServicePlan />} />
 
         <Route path="/onboarding-bank" element={<OnboardingBank />} />
 

@@ -47,7 +47,7 @@ const handleSubmit = (e) => {
 
   localStorage.setItem("hasBulletin", true);
   console.log("Form submitted", form);
-  navigate("/publisher/post"); //TODO: sementara by pass, nanti navigate ke screen 5 service plan
+  navigate("/onboarding-publisher-service-plan");
 };
 
 
