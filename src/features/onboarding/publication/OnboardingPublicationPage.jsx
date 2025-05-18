@@ -2,7 +2,7 @@ import OnboardingLayout from '@/components/layouts/OnboardingLayout';
 import StepperProgressBar from '@/components/ui/StepperProgressBar';
 import { X } from 'lucide-react';
 import PublicationForm from './PublicationForm';
-import usePageTitle from "@/hooks/usePageTitle";
+import usePageTitle from '@/hooks/usePageTitle';
 
 export default function OnboardingPublicationPage() {
   usePageTitle("Set Up Your Publication");

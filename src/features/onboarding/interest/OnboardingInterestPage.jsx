@@ -5,7 +5,7 @@ import OnboardingLayout from '@/components/layouts/OnboardingLayout';
 import StepperProgressBar from '@/components/ui/StepperProgressBar';
 import TopicSelector from "./TopicSelector";
 import Button from '@/components/ui/Button';
-import usePageTitle from "@/hooks/usePageTitle";
+import usePageTitle from '@/hooks/usePageTitle';
 
 const OnboardingInterestPage = () => {
   const [selectedTopics, setSelectedTopics] = useState([]);

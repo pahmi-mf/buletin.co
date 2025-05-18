@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Toggle } from '@/components/ui/Toggle';
 import { ReadingView } from './ReadingView';
 import { WritingView } from './WritingView';
-import usePageTitle from "@/hooks/usePageTitle";
+import usePageTitle from '@/hooks/usePageTitle';
 
 export function HomePage() {
   usePageTitle("Home");

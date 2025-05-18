@@ -1,7 +1,7 @@
 import OnboardingLayout from '@/components/layouts/OnboardingLayout';
 import StepperProgressBar from '@/components/ui/StepperProgressBar';
 import ProfileForm from './ProfileForm';
-import usePageTitle from "@/hooks/usePageTitle";
+import usePageTitle from '@/hooks/usePageTitle';
 
 export default function OnboardingProfilePage() {
   usePageTitle("Complete Your Profile");

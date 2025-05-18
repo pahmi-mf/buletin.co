@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { CameraIcon } from "@heroicons/react/24/outline";
+import { CameraIcon } from '@heroicons/react/24/outline';
 
 export default function AvatarUploader({ onChange }) {
   const fileInputRef = useRef(null);

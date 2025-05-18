@@ -1,9 +1,9 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import AvatarUploader from '@/components/ui/AvatarUploader';
 import InputWithValidation from '@/components/ui/InputWithValidation';
 import SelectWithValidation from '@/components/ui/SelectWithValidation';
-import { Textarea } from "@/components/ui/textarea";
-import { INTEREST_CATEGORIES } from "@/constants/interests";
+import { Textarea } from '@/components/ui/textarea';
+import { INTEREST_CATEGORIES } from '@/constants/interests';
 import Button from '@/components/ui/Button';
 
 export default function PublicationForm() {
@@ -17,7 +17,7 @@ export default function PublicationForm() {
   });
 
   const [errors, setErrors] = useState({});
-  const fileInputRef = useRef(null);
+  // const fileInputRef = useRef(null);
 
   const handleChange = (field) => (e) => {
     const value = e?.target?.value ?? e;

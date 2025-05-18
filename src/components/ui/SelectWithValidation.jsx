@@ -1,5 +1,5 @@
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem } from "@/components/ui/select";
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem } from '@/components/ui/select';
 
 export default function SelectWithValidation({
   label,
