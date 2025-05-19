@@ -2,7 +2,7 @@ import { useState } from "react";
 import AvatarUploader from '@/components/ui/AvatarUploader';
 import InputWithValidation from '@/components/ui/InputWithValidation';
 import SelectWithValidation from '@/components/ui/SelectWithValidation';
-import { Textarea } from '@/components/ui/textarea';
+import Textarea from '@/components/ui/textarea';
 import { INTEREST_CATEGORIES } from '@/constants/interests';
 import Button from '@/components/ui/Button';
 import { useNavigate } from "react-router-dom";

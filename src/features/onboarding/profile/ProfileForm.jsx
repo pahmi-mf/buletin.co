@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AvatarUploader from '@/components/ui/AvatarUploader';
 import Button from '@/components/ui/Button';
 import InputWithValidation from '@/components/ui/InputWithValidation';
+import Textarea from '@/components/ui/textarea';
 import InfoNote from '@/components/ui/InfoNote';
 
 export default function ProfileForm() {
@@ -63,36 +64,23 @@ export default function ProfileForm() {
       />
 
       {/* Bio */}
-      <div>
-        <label className="block text-sm font-semibold text-gray-800 mb-1">
-          Tell us about yourself
-        </label>
-        <textarea
-          name="bio"
-          placeholder="Share a brief bio or introduce yourself"
-          value={formData.bio}
-          onChange={handleChange}
-          className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900
-            placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50
-            dark:bg-gray-100 dark:border-gray-300 resize-none"
-          rows={4}
-        />
-      </div>
+      <Textarea
+        label="Tell us about yourself"
+        name="bio"
+        placeholder="Share a brief bio or introduce yourself"
+        value={formData.bio}
+        onChange={handleChange}
+      />
 
       {/* URL */}
-      <div>
-        <label className="block text-sm font-semibold text-gray-800 mb-1">URL</label>
-        <input
-          type="url"
-          name="url"
-          placeholder="https://instagram.com/username"
-          value={formData.url}
-          onChange={handleChange}
-          className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900
-            placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50
-            dark:bg-gray-100 dark:border-gray-300"
-        />
-      </div>
+      <InputWithValidation
+        label="URL"
+        type="url"
+        name="url"
+        placeholder="https://instagram.com/username"
+        value={formData.url}
+        onChange={handleChange}
+      />
 
       {/* Info note */}
       <InfoNote />

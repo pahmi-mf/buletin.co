@@ -13,6 +13,8 @@ function App() {
   const handleBeforeUnload = () => {
     localStorage.removeItem("userFullName");
     localStorage.removeItem("hasBulletin");
+    localStorage.removeItem("servicePlans");
+    
   };
 
   window.addEventListener("beforeunload", handleBeforeUnload);

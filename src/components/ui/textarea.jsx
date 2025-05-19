@@ -1,9 +1,32 @@
-export function Textarea({ className = '', ...props }) {
+import { baseInputStyle } from './inputStyle';
+import { Label } from '@/components/ui/label';
+
+export default function Textarea({
+  id,
+  label,
+  error,
+  className = '',
+  ...props
+}) {
   return (
-    <textarea
-      className={`w-full bg-white px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
-      rows="4"
-      {...props}
-    />
+    <div>
+      {label && (
+        <Label
+          htmlFor={id}
+          className={`mb-1 block text-sm font-medium ${error ? 'text-red-600' : 'text-gray-900'}`}
+        >
+          {label}
+        </Label>
+      )}
+
+      <textarea
+        id={id}
+        className={`${baseInputStyle} ${className}`}
+        rows="4"
+        {...props}
+      />
+
+      {error && <p className="text-sm text-red-600 mt-1">{error}</p>}
+    </div>
   );
 }

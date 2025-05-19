@@ -7,22 +7,38 @@ export default function InputWithValidation({
   label,
   value,
   onChange,
-  error,
+  error = null,
   placeholder,
+  type = 'text',
+  required = false,
+  className = '',
+  ...props
 }) {
   return (
     <div>
-      <Label htmlFor={id} className={`mb-1 block text-sm font-medium ${error ? "text-red-600" : "text-gray-900"}`}>
-        {label}
-      </Label>
+      {label && (
+        <Label
+          htmlFor={id}
+          className={`mb-1 block text-sm font-medium ${error ? "text-red-600" : "text-gray-900"}`}
+        >
+          {label}
+        </Label>
+      )}
+
       <Input
         id={id}
         name={name}
+        type={type}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`w-full rounded-md border px-4 py-2 ${error ? "border-red-500 focus:ring-red-300" : "border-gray-300 focus:ring-blue-500"}`}
+        required={required}
+        className={`${
+          error ? "ring-1 ring-red-500" : ""
+        } ${className}`}
+        {...props}
       />
+
       {error && <p className="text-sm text-red-600 mt-1">{error}</p>}
     </div>
   );
