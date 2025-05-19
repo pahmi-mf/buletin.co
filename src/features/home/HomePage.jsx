@@ -2,7 +2,6 @@ import OnboardingLayout from '@/components/layouts/OnboardingLayout';
 import { useState, useEffect } from 'react';
 import { Toggle } from '@/components/ui/Toggle';
 import { ReadingView } from './ReadingView';
-import { WritingDashboard } from '@/components/home/WritingDashboard';
 
 import usePageTitle from '@/hooks/usePageTitle';
 import { useNavigate } from "react-router-dom";
@@ -23,7 +22,7 @@ export function HomePage() {
     if (newMode === 'writing' && !hasBulletin) {
       navigate("/onboarding-publication");
     } else {
-      setMode(newMode);
+      navigate("/publisher/post");
     }
   };
 
@@ -31,12 +30,11 @@ export function HomePage() {
     <OnboardingLayout 
       centerContent={      <Toggle mode={mode} onChange={handleToggle} hasBulletin={hasBulletin} />
 } 
-// TODO: rightContent menu nav
     >
     <div className="px-6 pb-8 max-w-7xl mx-auto">
 
       <div>
-        {mode === 'reading' ? <ReadingView /> : <WritingDashboard />}
+        <ReadingView />
       </div>
     </div>
     </OnboardingLayout>

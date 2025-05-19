@@ -30,7 +30,6 @@ export function PublisherPostPage() {
     <OnboardingLayout 
       centerContent={      <Toggle mode={mode} onChange={handleToggle} hasBulletin={hasBulletin} />
 } 
-// TODO: rightContent menu nav
     >
     <div className="px-6 pb-8 max-w-7xl mx-auto">
       <div>
