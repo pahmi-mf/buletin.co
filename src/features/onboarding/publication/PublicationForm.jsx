@@ -6,7 +6,7 @@ import Textarea from '@/components/ui/textarea';
 import { INTEREST_CATEGORIES } from '@/constants/interests';
 import Button from '@/components/ui/Button';
 import { useNavigate } from "react-router-dom";
-
+import InputWithPrefix from '@/components/ui/InputWithPrefixValidation';
 export default function PublicationForm() {
   const navigate = useNavigate();
   const [form, setFormData] = useState({
@@ -66,7 +66,7 @@ const handleSubmit = (e) => {
         value={form.name}
         onChange={handleChange("name")}
         error={errors.name}
-        placeholder="e.g. The Weekly Journal"
+        placeholder="Give your bulletin a unique name."
       />
 
       {/* Description */}
@@ -78,7 +78,7 @@ const handleSubmit = (e) => {
           id="description"
           value={form.description}
           onChange={handleChange("description")}
-          placeholder="Tell readers what your bulletin is about"
+          placeholder="Briefly describe what your bulletin is about."
         />
       </div>
 
@@ -88,19 +88,20 @@ const handleSubmit = (e) => {
         value={form.category}
         onChange={handleChange("category")}
         error={errors.category}
-        placeholder="Choose category"
+        placeholder="Choose a category that best fits your bulletin"
         options={INTEREST_CATEGORIES}
       />
 
       {/* URL */}
-      <InputWithValidation
+      <InputWithPrefix
         id="url"
         name="url"
         label="Bulletin URL"
         value={form.url}
         onChange={handleChange("url")}
         error={errors.url}
-        placeholder="e.g. theweeklyjournal"
+        placeholder="your_bulletin"
+        prefix="https://www.buletin.co/"
       />
 
       {/* Submit button */}
